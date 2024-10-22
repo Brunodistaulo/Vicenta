@@ -55,32 +55,32 @@ const Register = () => {
     return (
         <div>
             <div>
-                <div className='bg-slate-300 w-[90%] mx-auto mt-10 rounded-lg'>
+                <div className='bg-white shadow-sm w-[90%] md:w-[70%] lg:w-1/2 mx-auto mt-20 rounded-lg'>
                     <div>
-                        <h1 className='text-3xl text-center pt-2'>REGISTRATE</h1>
+                        <h1 className='text-3xl text-center pt-2 md:pt-5'>REGISTRATE</h1>
                         <p className='text-center pt-1'>Crea tu cuenta para acceder a todos los apartados</p>
-                        <p className='pl-3 py-3'>¿Ya tienes cuenta? <a href="/login" className='text-blue-600'>Inicia sesión aquí.</a></p>
+                        <p className='pl-3 py-3 md:pl-10 md:py-5'>¿Ya tienes cuenta? <a href="/login" className='text-blue-600'>Inicia sesión aquí.</a></p>
                     </div>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-6 mx-auto">
 
                         <div className='flex flex-col w-[80%] mx-auto mt-5'>
                             <label className='font-semibold'>Nombre y Apellidos</label>
-                            <input type="text" name="name" className='text-black rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='John Doe' onChange={handleChange} value={inputs.name} />
+                            <input type="text" name="name" className='text-black bg-black/5 lg:h-10 rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='John Doe' onChange={handleChange} value={inputs.name} />
                         </div>
 
                         <div className='flex flex-col w-[80%] mx-auto '>
                             <label className='font-semibold'>Dirección</label>
-                            <input type="text" name="address" className='text-black rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='Calle falsa 123' onChange={handleChange} value={inputs.address} />
+                            <input type="text" name="address" className='text-black bg-black/5 lg:h-10 rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='Calle falsa 123' onChange={handleChange} value={inputs.address} />
                         </div>
 
                         <div className='flex flex-col w-[80%] mx-auto '>
                             <label className='font-semibold'>Teléfono</label>
-                            <input type="text" name="phone" className='text-black rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='381 765 4321' onChange={handleChange} value={inputs.phone} />
+                            <input type="text" name="phone" className='text-black bg-black/5 lg:h-10 rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='381 765 4321' onChange={handleChange} value={inputs.phone} />
                         </div>
 
                         <div className='flex flex-col w-[80%] mx-auto'>
                             <label className='font-semibold'>Correo</label>
-                            <input type="text" name="email" className='text-black rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='example@example.com' onChange={handleChange} value={inputs.email} />
+                            <input type="text" name="email" className='text-black bg-black/5 lg:h-10 rounded-md h-8 pl-2 placeholder:italic outline-none' placeholder='example@example.com' onChange={handleChange} value={inputs.email} />
                         </div>
 
                         <div className='flex flex-col w-[80%] mx-auto relative'>
@@ -91,7 +91,7 @@ const Register = () => {
                                 <input
                                     type={showPassword ? "text" : "password"}
                                     name="password"
-                                    className='text-black rounded-md h-8 pl-2 pr-10 w-full placeholder:italic outline-none'
+                                    className='text-black bg-black/5 rounded-md h-8 pl-2 lg:h-10 pr-10 w-full placeholder:italic outline-none'
                                     onChange={handleChange}
                                     placeholder={showPassword ? "ContraseñaSegura" : '********'}
                                     value={inputs.password}
@@ -112,10 +112,10 @@ const Register = () => {
                         </div>
 
                         <div className='flex justify-center gap-7'>
-                            <button className='bg-white text-black px-2 py-2 mb-3 rounded-lg' type="submit">Registrarse</button>
-                            <p className='flex items-center mb-3'>O</p>
-                            <div className='bg-white text-black px-2 py-2 mb-3 rounded-lg w-[105px] text-center'>Google</div>
-                        </div>
+                        <button className='bg-black text-white px-2 py-2 mb-3 rounded-lg lg:tracking-widest lg:w-36' type="submit">Registrarse</button>
+                        <p className='flex items-center mb-3'>O</p>
+                        <div className='bg-black cursor-pointer text-white px-2 py-2 mb-3 rounded-lg lg:w-36 w-[105px] lg:tracking-widest text-center'>Google</div>
+                    </div>
 
                     </form>
                 </div>

@@ -1,10 +1,16 @@
 import React from 'react'
-import Login from '@/components/login/login'
+import Hero from '@/components/hero/home'
+import ProductSlider from '@/components/Maspopulares/productSlider'
+import ProductVendidos from '@/components/Masvendidos/masvendidos'
+import Footer from '@/components/footer/footer'
 
 const Home = () => {
   return (
     <div>
-      {/* <Login /> */}
+      <Hero />
+      <ProductSlider />
+      <ProductVendidos />
+      <Footer />
     </div>
   )
 }

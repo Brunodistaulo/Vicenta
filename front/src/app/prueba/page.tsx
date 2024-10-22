@@ -1,15 +1,13 @@
-'use client';
-import React from 'react';
-import Navbar from '@/components/navbar/navbar';
+'use client'
+import React from 'react'
+import { userTokenStore } from '@/store/tokenStore'
 
-const AuthForm: React.FC = () => {
-   
+const page = () => {
+  const token = userTokenStore((state) => state.token)
+  console.log(token)
+  return (
+    <div>page</div>
+  )
+}
 
-    return (
-        <div>
-            <Navbar />
-        </div>
-    );
-};
-
-export default AuthForm;
+export default page
