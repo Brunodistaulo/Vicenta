@@ -13,10 +13,10 @@ const config: Config = {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
-  		fontFamily: {
-  			italiana: ['Italiana', 'serif'],
-  			jost: ['Jost', 'sans-serif']
-  		},
+  		// fontFamily: {
+  		// 	italiana: ['Lexend', 'serif'],
+  		// 	jost: ['Lexend', 'sans-serif']
+  		// },h
   		keyframes: {
   			'move-right': {
   				'0%': {
