@@ -1,26 +1,21 @@
-import { ILogin } from "@/interfaces/ILogin"
-import Swal from 'sweetalert2';
+import { ILogin } from "@/interfaces/ILogin";
+import axios from "axios";
 
-export const loginAuth = async ( data: ILogin ) => {
-    console.log(data)
-    const res = await fetch('http://localhost:8080/users/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    console.log(res)
-    if (res.ok) {
-        return res;
+export const loginAuth = async (data: ILogin) => {
+  try {
+    const res = await axios.post("http://localhost:8080/users/login", {
+      email: data.email,
+      password: data.password,
+    });
+
+    if (res.status === 200) {
+      return res.data;
     } else {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Algo salio mal",
-            showConfirmButton: true,
-            confirmButtonText: "Aceptar",
-            confirmButtonColor: "black",
-        });
+      throw new Error("Error en la autenticación");
     }
-}
+  } catch (error: any) {
+    console.error("Error en login:", error.response?.data || error.message);
+
+    return null;
+  }
+};

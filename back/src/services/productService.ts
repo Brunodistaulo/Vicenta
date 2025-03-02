@@ -37,6 +37,8 @@ export const createProduct = async (product: CreateProductDto) => {
   }
 };
 
+
+
 export const editProductService = async (productId: string, product: Partial<CreateProductDto>) => {
   const ProductBody = await ProductModel.findOne({ where: { id: Number(productId) } });
 

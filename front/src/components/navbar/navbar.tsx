@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
 import React, { useState, Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ShoppingCart, User, ChevronDown } from 'lucide-react'
+import { ShoppingCart, User, ChevronDown, Timer } from 'lucide-react'
 import { userTokenStore } from '@/store/tokenStore'
 import { Menu, Transition } from '@headlessui/react'
 import Swal from 'sweetalert2'
@@ -48,8 +48,9 @@ const Navbar = () => {
     if (item.onClick) {
       item.onClick()
     } else {
-      router.push(item.href) 
+      router.push(item.href)
     }
+    setOpen(false)
   }
 
   return (
@@ -163,13 +164,13 @@ const Navbar = () => {
                   {item.label}
                 </button>
               )) : menuItems.map((item) => (
-                <Link
+                <button
                   key={item.href}
-                  href={item.href}
-                  className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase"
+                  onClick={() => handleMenuItemClick(item)}
+                  className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
             </div>
           </motion.div>

@@ -39,10 +39,10 @@ export default function Login() {
             return
         }
         const res = await loginAuth(inputs)
-        const data = await res?.json()
-        const { token } = await data
+        const { token } = await res
+        console.log(token);
         setToken(token)
-        if (res?.ok) {
+        if (res.message) {
             setInputs({
                 email: '',
                 password: ''
@@ -59,26 +59,10 @@ export default function Login() {
         }
     }
 
-    useEffect(() => {
-        if (token) {
-            const timer = setTimeout(() => {
-                Swal.fire({
-                    icon: "info",
-                    title: "Usuario ya iniciado",
-                    text: "Ya has iniciado sesión",
-                    confirmButtonText: "Aceptar",
-                    confirmButtonColor: "black",
-                });
-                router.push('/');
-            }, 500);
-    
-            return () => clearTimeout(timer);
-        }
-    }, [token, router]);
 
     return (
         <div>
-            <div className='bg-white shadow-sm w-[90%] md:w-[70%] lg:w-1/2 mx-auto mt-20 rounded-lg'>
+            <div className='bg-white shadow-sm w-[90%] md:w-[70%] lg:w-1/2 mx-auto mt-16 rounded-lg'>
                 <div>
                     <h1 className='text-3xl text-center pt-2 md:pt-5'>INICIAR SESION</h1>
                     <p className='text-center pt-1'>Inicia sesión para acceder a todos los apartados</p>

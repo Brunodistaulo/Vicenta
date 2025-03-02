@@ -7,6 +7,7 @@ import { registerAuth } from '@/helpers/registerAuth'
 import { EyeIcon, EyeOffIcon } from 'lucide-react'
 
 
+
 const Register = () => {
     const router = useRouter()
     const setToken = userTokenStore((state) => state.setToken)
@@ -55,7 +56,7 @@ const Register = () => {
     return (
         <div>
             <div>
-                <div className='bg-white shadow-sm w-[90%] md:w-[70%] lg:w-1/2 mx-auto mt-20 rounded-lg'>
+                <div className='bg-white shadow-sm w-[90%] md:w-[70%] lg:w-1/2 mx-auto mt-16 rounded-lg'>
                     <div>
                         <h1 className='text-3xl text-center pt-2 md:pt-5'>REGISTRATE</h1>
                         <p className='text-center pt-1'>Crea tu cuenta para acceder a todos los apartados</p>

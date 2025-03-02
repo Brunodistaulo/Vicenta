@@ -16,7 +16,7 @@ export const productsStore = create<State>((set) => ({
     productDetail: null,
     getProducts: async () => {
         try {
-            const res = await fetch('http://localhost:8080/products', {
+            const res = await fetch('https://0w1f889m-8080.brs.devtunnels.ms/products', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
