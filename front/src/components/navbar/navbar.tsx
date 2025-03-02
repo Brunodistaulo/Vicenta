@@ -54,7 +54,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="relative z-10 bg-white shadow-md">
+    <nav className="relative z-10 bg-[#DCD7C9] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -65,10 +65,10 @@ const Navbar = () => {
               {token ? (
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
-                    <Menu.Button className="flex items-center text-gray-600 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                    <Menu.Button className="flex items-center text-[#A27B5C] 0 px-3 py-2  rounded-sm text-sm font-medium">
                       <User className="h-5 w-5 mr-2" />
                       BIENVENIDO
-                      <ChevronDown className="h-4 w-4 ml-1" />
+                      <ChevronDown className="h-4 w-4 ml-1" color='#A27B5C'/>
                     </Menu.Button>
                   </div>
                   <Transition
@@ -105,7 +105,7 @@ const Navbar = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium uppercase"
+                    className="text-[#A27B5C] border-2 border-[#A27B5C] px-4 py-2 rounded-md text-sm font-semibold uppercase"
                   >
                     {item.label}
                   </Link>
@@ -115,11 +115,11 @@ const Navbar = () => {
           </div>
           <div className="md:hidden flex items-center">
             <Link href="/cart" className="mr-2">
-              <ShoppingCart className="h-6 w-6 text-gray-400" />
+              <ShoppingCart className="h-6 w-6" color='#A27B5C'/>
             </Link>
             <button
               onClick={() => setOpen(!open)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-[#A27B5C] focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               <motion.div
@@ -159,7 +159,7 @@ const Navbar = () => {
                 <button
                   key={item.href}
                   onClick={() => handleMenuItemClick(item)}
-                  className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
+                  className="text-gray-600 hover:bg-[#A27B5C] hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
                 >
                   {item.label}
                 </button>
@@ -167,7 +167,7 @@ const Navbar = () => {
                 <button
                   key={item.href}
                   onClick={() => handleMenuItemClick(item)}
-                  className="text-gray-600 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
+                  className="text-gray-600 hover:bg-[#A27B5C] hover:text-[#DCD7C9] hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
                 >
                   {item.label}
                 </button>
