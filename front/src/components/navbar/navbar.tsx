@@ -54,11 +54,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="relative z-10 bg-[#DCD7C9] shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <Image src="/logo-no-background.png" alt="logo" width={120} height={100} className="h-8 w-auto" />
+    <nav className="relative z-10 bg-[#DCD7C9] shadow-sm h-24 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex justify-between items-center h-24">
+          <div className="flex-shrink-0 cursor-pointer select-none" onClick={() => router.push('/')}>
+            <span className='text-5xl font-bold text-[#3F4F44] uppercase'>vi</span>
+            <span className='text-5xl font-bold text-[#A27B5C] uppercase'>centa</span>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
@@ -167,7 +168,7 @@ const Navbar = () => {
                 <button
                   key={item.href}
                   onClick={() => handleMenuItemClick(item)}
-                  className="text-gray-600 hover:bg-[#A27B5C] hover:text-[#DCD7C9] hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
+                  className="text-gray-600 hover:bg-[#A27B5C] hover:text-[#DCD7C9] block px-3 py-2 rounded-md text-base font-medium uppercase w-full text-left"
                 >
                   {item.label}
                 </button>

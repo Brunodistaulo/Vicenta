@@ -16,7 +16,7 @@ export default function Reveal() {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden pt-6 -mt-10">
+    <div className="relative h-screen w-full overflow-hidden pt-6 -mt-14">
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ x: "-100%" }}
@@ -95,9 +95,9 @@ export default function Reveal() {
             <Link href="/coleccion">
               <Button
                 size="lg"
-                className="bg-[#3F4F44] hover:bg-[#3F4F44]/90 text-[#DCD7C9]  text-lg px-8 py-6 rounded-lg font-semibold"
+                className="bg-[#3F4F44] hover:bg-[#3F4F44] text-[#DCD7C9]  text-lg px-8 py-6 rounded-lg font-semibold"
               >
-                Explorar Colección
+                Ver productos
               </Button>
             </Link>
           </motion.div>
